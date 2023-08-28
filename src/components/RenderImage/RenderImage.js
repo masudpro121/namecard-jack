@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Skeleton from "react-loading-skeleton"
 
-function ShowImage({src}) {
+function RenderImage({src}) {
   const [isLoading, setIsLoading] = useState(true)
   const handleLoaded = () =>{
     setIsLoading(false)
@@ -17,4 +17,4 @@ function ShowImage({src}) {
   )
 }
 
-export default ShowImage
+export default RenderImage
