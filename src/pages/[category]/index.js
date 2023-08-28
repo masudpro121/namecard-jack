@@ -13,7 +13,7 @@ function CategoryPage() {
       {
         data[category]?.map((item, key)=>{
           return (
-              <Link key={item+key} href={"/"+category}>
+              <Link key={item+key} href={`/${category}/${key}`}>
                 <RenderImage src={item} />
               </Link>
           )
