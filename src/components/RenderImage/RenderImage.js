@@ -6,13 +6,15 @@ function RenderImage({src, cls=""}) {
   const handleLoaded = () =>{
     setIsLoading(false)
   }
-  
+  console.log(src, 'src');
   return (
     <div className={"w-80 "+cls}>
      {
-      isLoading && <Skeleton duration={0.7} className="h-80" />
+      isLoading  && <Skeleton duration={0.7} className="h-80" />
      }
-    <img className={isLoading?"hidden":"block" + " rounded-md "} src={src} onLoad={handleLoaded} />
+    {
+       src && <img className={isLoading?"hidden":"block" + " rounded-md "} src={src} onLoad={handleLoaded} />
+    }
     </div>
   )
 }
