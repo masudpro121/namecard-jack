@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useContext } from 'react'
-import { MyContext } from "../_app";
 import Link from "next/link";
 import RenderImage from "@/components/RenderImage/RenderImage";
+import { MyContext } from "@/pages/_app";
 
 function CategoryPage() {
   const {data} = useContext(MyContext)
@@ -18,7 +18,7 @@ function CategoryPage() {
       {
         data[category]?.map((item, key)=>{
           return (
-              <Link key={item+key} href={`/${category}/${key}`}>
+              <Link key={item+key} href={`/category/${category}/${key}`}>
                 <RenderImage src={item} />
               </Link>
           )
