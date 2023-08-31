@@ -36,13 +36,13 @@ const Header = () => {
             <Link href="/" className="hover:text-gray-200">Home</Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-200">About</Link>
+            <Link href="/about" className="hover:text-gray-200">About</Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-200">Services</Link>
+            <Link href="/services" className="hover:text-gray-200">Services</Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-200">Contact</Link>
+            <Link href="/contact" className="hover:text-gray-200">Contact</Link>
           </li>
         </ul>
       </nav>
@@ -54,13 +54,13 @@ const Header = () => {
             <Link href="/" className="hover:text-gray-200">Home</Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-200">About</Link>
+            <Link href="/about" className="hover:text-gray-200">About</Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-200">Services</Link>
+            <Link href="/services" className="hover:text-gray-200">Services</Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-200">Contact</Link>
+            <Link href="/contact" className="hover:text-gray-200">Contact</Link>
           </li>
         </ul>
       </nav>
