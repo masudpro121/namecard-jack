@@ -19,7 +19,7 @@ const Header = () => {
           alt="Logo"
           className="w-8 h-8 mr-2"
         />
-        <div className="font-bold text-xl ml-2">AI Namecard</div>
+        <div className="font-bold text-xl ml-2">Web Name</div>
         </Link>
       </div>
       <div className="md:hidden">

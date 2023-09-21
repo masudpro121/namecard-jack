@@ -1,15 +1,13 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Link from "next/link"
+import React from 'react'
 
-import ShowCategory from "@/components/ShowCategory/ShowCategory"
-import Layout from "@/components/Layout/Layout"
-
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const Landing = () => {
   return (
-      <div>
-        <ShowCategory />
-      </div>
+    <div>
+      <Link href="/ai-image">AI Image</Link> <br/>
+      <Link href="/vocabulary">Vocabulary</Link>
+    </div>
   )
 }
+
+export default Landing
