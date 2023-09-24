@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white">
+    <header className="bg-gray-800 text-white ">
       <div className=" py-4 px-5 md:px-10 flex justify-between items-center">
       <div >
         <Link href="/" className="flex items-center ">
@@ -24,7 +24,7 @@ const Header = () => {
       <div className="md:hidden">
         <button
           onClick={toggleMenu}
-          className="text-xl focus:outline-none"
+          className="text-xl bg-slate-800 focus:outline-none"
         >
           &#9776;
         </button>

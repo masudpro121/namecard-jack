@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const RootSuffixPrefix = () => {
   return (
-    <div>RootSuffixPrefix</div>
+    <VocabularyLayout>
+      <div>RootSuffixPrefix</div>
+    </VocabularyLayout>
   )
 }
 

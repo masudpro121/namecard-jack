@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const MockExam = () => {
   return (
-    <div>MockExam</div>
+    <VocabularyLayout>
+      <div>MockExam</div>
+    </VocabularyLayout>
   )
 }
 

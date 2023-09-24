@@ -1,7 +1,7 @@
-import '@/styles/globals.css'
+import "../styles/globals.css"
 import 'react-loading-skeleton/dist/skeleton.css'
 import { createContext, useEffect, useState } from "react"
-import Layout from "@/components/Layout/Layout"
+import Layout from "../components/Layouts/Layout"
 export const MyContext = createContext()
 
 export default function App({ Component, pageProps }) {
@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
     selectedWord, setSelectedWord
   }
   useEffect(()=>{
-    const mydata = require("@/data.json")
+    const mydata = require("../data.json")
     setData(mydata)
     setSelectedWord(localStorage.getItem("word") || "")
   },[])

@@ -40,7 +40,7 @@ const Vocabulary = () => {
 
       <div>
         {selectedWord && (
-          <div className="text-center mt-3">
+          <div className="text-center mt-5">
             Selected: <span className="font-semibold">{selectedWord}</span>
           </div>
         )}
@@ -52,7 +52,7 @@ const Vocabulary = () => {
           return (
             <div
               key={category + i}
-              className="mt-20 bg-gray-200 py-5 px-5  m-5 rounded-md"
+              className="mt-10 bg-gray-200 py-5 px-5  m-5 rounded-md"
             >
               <div className="mb-5 text-2xl font-bold text-slate-900">
                 {category}

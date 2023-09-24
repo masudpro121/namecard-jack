@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useContext } from 'react'
 import Link from "next/link";
-import RenderImage from "@/components/RenderImage/RenderImage";
-import { MyContext } from "@/pages/_app";
+import RenderImage from "../../../components/RenderImage/RenderImage";
+import { MyContext } from "../../_app";
 
 function CategoryPage() {
   const {data} = useContext(MyContext)

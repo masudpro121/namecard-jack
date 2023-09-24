@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 function Comic() {
   return (
-    <div>Comic</div>
+    <VocabularyLayout>
+      <div>Comic</div>
+    </VocabularyLayout>
   )
 }
 

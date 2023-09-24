@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const SatLevelQuestion = () => {
   return (
-    <div>SatLevelQuestion</div>
+    <VocabularyLayout>
+      <div>SatLevelQuestion</div>
+    </VocabularyLayout>
   )
 }
 

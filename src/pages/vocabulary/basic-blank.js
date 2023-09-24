@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const BasicBlank = () => {
   return (
-    <div>Basic Blank</div>
+    <VocabularyLayout>
+      <div>Basic Blank</div>
+    </VocabularyLayout>
   )
 }
 

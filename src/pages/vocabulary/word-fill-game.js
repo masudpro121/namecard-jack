@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const WordFillGame = () => {
   return (
-    <div>WordFillGame</div>
+    <VocabularyLayout>
+      <div>WordFillGame</div>
+    </VocabularyLayout>
   )
 }
 

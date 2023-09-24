@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const SceneBasedDialogue = () => {
   return (
-    <div>SceneBasedDialogue</div>
+    <VocabularyLayout>
+      <div>SceneBasedDialogue</div>
+    </VocabularyLayout>
   )
 }
 

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import RenderImage from "../RenderImage/RenderImage"
 import Link from "next/link"
-import { MyContext } from "@/pages/_app"
+import { MyContext } from "../../pages/_app"
 
 function ShowCategory() {
   const [isLoading, setIsLoading] = useState(false)

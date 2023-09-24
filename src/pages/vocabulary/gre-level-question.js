@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const GreLevelQuestion = () => {
   return (
-    <div>GreLevelQuestion</div>
+    <VocabularyLayout>
+      <div>GreLevelQuestion</div>
+    </VocabularyLayout>
   )
 }
 

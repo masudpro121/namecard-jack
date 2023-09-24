@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const ThemeBasedReading = () => {
   return (
-    <div>ThemeBasedReading</div>
+    <VocabularyLayout>
+      <div>ThemeBasedReading</div>
+    </VocabularyLayout>
   )
 }
 

@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const TicTacToe = () => {
   return (
-    <div>TicTacToe</div>
+    <VocabularyLayout>
+      <div>TicTacToe</div>
+    </VocabularyLayout>
   )
 }
 

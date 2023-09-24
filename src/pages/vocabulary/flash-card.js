@@ -1,8 +1,11 @@
 import React from 'react'
+import VocabularyLayout from "../../components/Layouts/VocabularyLayout"
 
 const FlashCard = () => {
   return (
-    <div>FlashCard</div>
+    <VocabularyLayout>
+      <div>FlashCard</div>
+    </VocabularyLayout>
   )
 }
 

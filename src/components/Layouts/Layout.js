@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer"
 function Layout({children}) {
   return (
     <div>
-      <div>
+      <div className="sticky top-0">
         <Header />
       </div>
       <div>
