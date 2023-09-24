@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../pages/_app";
 import Link from "next/link";
 import vocabularyCategory from "@/data/vocabulary-category";
@@ -6,16 +6,20 @@ const parentCategory = Object.keys(vocabularyCategory);
 
 function VocabularyLayout({ children }) {
   const { selectedWord } = useContext(MyContext);
-  const [sidebar, setSidebar] = useState("");
+  const [sidebar, setSidebar] = useState("close");
   const handleSidebar = () => {
     setSidebar(sidebar == "open" ? "close" : "open");
-    if (sidebar == "open") {
+  };
+  useEffect(()=>{
+    if (sidebar == "close") {
       document.body.style.overflow = "auto";
-    } else {
+    } 
+    if(sidebar=="open") {
       document.body.style.overflow = "hidden";
     }
-  };
-
+  },[sidebar])
+ 
+  let count = 0;
   return (
     <div className="">
       <div className="lg:flex ">
@@ -60,6 +64,7 @@ function VocabularyLayout({ children }) {
                   return (
                     <div key={"categorys" + i}>
                       {vocabularyCategory[category].map((item, i) => {
+                        count++
                         return (
                           <li key={"itemx" + i}>
                             <Link
@@ -77,7 +82,7 @@ function VocabularyLayout({ children }) {
                                 />
                               </svg>
                               <span className="flex-1 ml-3 whitespace-nowrap">
-                                {item.category}
+                                Day {count} : {item.category}
                               </span>
                             </Link>
                           </li>
