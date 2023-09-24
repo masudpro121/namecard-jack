@@ -1,5 +1,5 @@
-import BookImg from "./images/book.jpg"
-import HighlightBook from "./images/highlight.jpg"
+const BookImg =  "/assets/images/vocabulary/book.jpg"
+const HighlightBook = "/assets/images/vocabulary/highlight.jpg"
 
 export default [
   {

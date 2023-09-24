@@ -6,12 +6,15 @@ export const MyContext = createContext()
 
 export default function App({ Component, pageProps }) {
   const [data, setData] = useState({})
+  const [selectedWord, setSelectedWord] = useState("")
   const value = {
-    data, setData
+    data, setData,
+    selectedWord, setSelectedWord
   }
   useEffect(()=>{
     const mydata = require("@/data.json")
     setData(mydata)
+    setSelectedWord(localStorage.getItem("word") || "")
   },[])
   return <MyContext.Provider value={value}>
     <Layout>

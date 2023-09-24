@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Logo from "@/assets/images/logo.png"
 import Image from "next/image";
 import Link from "next/link";
 const Header = () => {
@@ -14,8 +13,8 @@ const Header = () => {
       <div className=" py-4 px-5 md:px-10 flex justify-between items-center">
       <div >
         <Link href="/" className="flex items-center ">
-        <Image
-          src={Logo}
+        <img
+          src="/assets/images/logo.png"
           alt="Logo"
           className="w-8 h-8 mr-2"
         />
