@@ -96,7 +96,7 @@ function VocabularyLayout({ children }) {
           </aside>
         </div>
 
-        <div className="w-full flex justify-center ">
+        <div className="w-full">
           <div className="text-center ">
             <h3 className="my-3 font-bold text-4xl text-slate-700 uppercase">
               {selectedWord}
