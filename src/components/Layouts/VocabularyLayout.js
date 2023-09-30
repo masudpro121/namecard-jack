@@ -4,7 +4,7 @@ import Link from "next/link";
 import vocabularyCategory from "@/data/vocabulary-category";
 const parentCategory = Object.keys(vocabularyCategory);
 
-function VocabularyLayout({ children }) {
+function VocabularyLayout({ children, pageTitle }) {
   const { selectedWord } = useContext(MyContext);
   const [sidebar, setSidebar] = useState("close");
   const handleSidebar = () => {
@@ -99,7 +99,7 @@ function VocabularyLayout({ children }) {
         <div className="w-full">
           <div className="text-center ">
             <h3 className="my-3 font-bold text-4xl text-slate-700 uppercase">
-              {selectedWord}
+              {pageTitle} {selectedWord}
             </h3>
             {children}
           </div>
