@@ -1,32 +1,18 @@
-import SSE from "express-sse";
-import { OpenAI } from "langchain/llms/openai";
-
-const sse = new SSE();
-export default async function handler(req, res) {
-  if(!res.flush){
-    res.flush = ()=>{}
-  }
- 
-  if (req.method == "POST") {
-    const { input, eventName } = JSON.parse(req.body);
-
-    const chat = new OpenAI({
-      model: 'gpt-3.5-turbo',
-      OPENAI_API_KEY: process.env.OPENAI_API,
-      streaming: true,
-      callbacks: [
-        {
-          handleLLMNewToken(token) {
-            sse.send(token, eventName);
-          },
-        },
+import OpenAI from "openai"
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+})
+export default async function handler(req, res){
+  if(req.method=='POST'){
+    const {input} = JSON.parse(req.body)
+    const response = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": input},
       ],
     });
-    chat.call(input).then(() => {
-      sse.send(null, "end");
-    });
-    return res.status(200).json({ result: "Streaming complete" });
-  } else if (req.method == "GET") {
-    sse.init(req, res);
+    console.log(response, 'resp');
+    return res.json(response)
   }
 }

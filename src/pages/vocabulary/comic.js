@@ -3,7 +3,6 @@ import VocabularyLayout from "../../components/Layouts/VocabularyLayout";
 import { MyContext } from "../_app";
 
 function Comic() {
-  const { selectedWord } = useContext(MyContext);
   const [comic, setComic] = useState("");
   const [source, setSource] = useState();
 
@@ -14,7 +13,7 @@ function Comic() {
   useEffect(() => {
     const eventName = `${Math.random()*999999}${Date.now()}`
     const selectedWord = localStorage.getItem("word");
-    fetch("/api/completion", {
+    fetch("/api/completion-stream", {
       method: "POST",
       body: JSON.stringify({
         input: "Write a comic of : " + selectedWord,
