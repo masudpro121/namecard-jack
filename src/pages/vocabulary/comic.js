@@ -11,19 +11,9 @@ function Comic() {
   };
 
   useEffect(() => {
-    const eventName = `${Math.random()*999999}${Date.now()}`
+    const eventName = `${Math.ceil(Math.random()*999999)}${Date.now()}`
     const selectedWord = localStorage.getItem("word");
-    fetch("/api/completion-stream", {
-      method: "POST",
-      body: JSON.stringify({
-        input: "Write a comic of : " + selectedWord,
-        eventName
-      }),
-    })
-    .then(res=>{
-      console.log('res');
-      handleIt(eventName)
-    })
+    handleIt(eventName,selectedWord)
   }, []);
 
  
@@ -32,24 +22,32 @@ function Comic() {
 
 
 
-  const handleIt = (eventName) => {
-    console.log('handle');
+  const handleIt = async (eventName, selectedWord) => {
     if (source) {
       source.close();
     }
-    const newSource = new EventSource("/api/completion");
+    const newSource = await new EventSource("/api/completion-stream");
     setSource(newSource);
     let text = ""
     newSource.addEventListener(eventName, (event) => {
       const token = processToken(event.data);
       text += token
-      setComic(text);
+      // setComic(text.replace(/panel.*/gim, ''));
+      setComic(text)
     });
   
     newSource.addEventListener("end", () => {
       newSource.close();
     });
-  
+
+    fetch("/api/completion-stream", {
+      method: "POST",
+      body: JSON.stringify({
+        input: "Write a comic of : " + selectedWord,
+        eventName
+      }),
+    })
+    
   };
   return (
     <VocabularyLayout pageTitle="Comic of ">

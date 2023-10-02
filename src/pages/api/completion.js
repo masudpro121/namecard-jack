@@ -1,6 +1,6 @@
 import OpenAI from "openai"
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 })
 export default async function handler(req, res){
   if(req.method=='POST'){
@@ -12,7 +12,6 @@ export default async function handler(req, res){
         {"role": "user", "content": input},
       ],
     });
-    console.log(response, 'resp');
     return res.json(response)
   }
 }
